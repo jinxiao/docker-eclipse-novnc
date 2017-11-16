@@ -72,8 +72,10 @@ RUN apt-get install -y --force-yes oracle-java8-installer
 RUN apt-get install -y --force-yes oracle-java8-set-default
 #
 # eclipse IDE
-RUN apt-get install -y desktop-file-utils
-RUN apt-get install -y eclipse
+RUN cd / && wget http://mirror.internode.on.net/pub/eclipse/technology/epp/downloads/release/oxygen/1a/eclipse-jee-oxygen-1a-linux-gtk-x86_64.tar.gz
+RUN tar -xvf eclipse-jee-oxygen-1a-linux-gtk-x86_64.tr.gz -C /opt/
+#RUN apt-get install -y desktop-file-utils
+#RUN apt-get install -y eclipse
 ############ end Eclipse stuff ###############
 
 # noVNC
